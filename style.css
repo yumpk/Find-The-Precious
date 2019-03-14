@@ -1,5 +1,14 @@
 /*fichier de css*/
 
+/*fonts*/
+
+@font-face {
+    font-family: Pete-Klassen-Aniron;
+    src: url(fonts/pete-klassen_aniron/anirm___.ttf);
+         /*url(/fonts/pete_klassen_aniron/anicm___.ttf) ;*/
+   }
+
+
 /*Body*/
 body{
     width: 90%;
@@ -9,14 +18,27 @@ body{
 
 /*navbar*/
 
-.navbar-brand{
-    font-size:2.5rem;
+.navbar{
+    background-color: rgb(236, 88, 0);
+    margin-bottom: 0%;
 }
 
 .navbar-nav{
-    font-size:1.5rem;
+    font-family: Pete-Klassen-Aniron, arial, sans-serif;
+    
 }
 
+.active{
+    border-bottom: 5px solid white;
+    border-radius:2px;
+}
+
+/*
+.logo-navbar{
+    background-image: url(integration_maquette_finale/logo.png);
+    width:auto;
+}
+*/
 
 
 /*Carousel*/
