@@ -3,18 +3,38 @@
 /*fonts*/
 
 @font-face {
-    font-family: Pete-Klassen-Aniron;
-    src: url(fonts/pete-klassen_aniron/anirm___.ttf);
-         /*url(/fonts/pete_klassen_aniron/anicm___.ttf) ;*/
-   }
+    font-family: Aniron;
+    src: url(fonts/pete-klassen_aniron/anirm___.ttf),
+         url(fonts/pete-klassen_aniron/anirb___.ttf),
+         url(fonts/pete-klassen_aniron/anicm___.ttf),
+         url(fonts/pete-klassen_aniron/anicb___.ttf);      
+}
+
+@font-face {
+    font-family: Party-Business;
+    src: url(fonts/nancy-lorenz_party-business/partybusiness.ttf);
+    }
+
+@font-face {
+    font-family: Annatar;
+    src: url(fonts/tengwar_annatar/tngan.ttf),
+         url(fonts/tengwar_annatar/tnganb.ttf),
+         url(fonts/tengwar_annatar/tnganbi.ttf),
+         url(fonts/tengwar_annatar/tngani.ttf);
+}
 
 
 /*Body*/
 body{
     width: 90%;
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Aniron, Arial, Helvetica, sans-serif;
+    background: url("img/bg_light.png");
     }
+
+h2{
+    font-size:1.8rem;
+}
 
 /*navbar*/
 
@@ -24,48 +44,93 @@ body{
 }
 
 .navbar-nav{
-    font-family: Pete-Klassen-Aniron, arial, sans-serif;
+    font-family: Aniron, arial, sans-serif;
     
 }
 
-.active{
+.navbar-nav :hover{
     border-bottom: 5px solid white;
     border-radius:2px;
 }
 
-/*
-.logo-navbar{
-    background-image: url(integration_maquette_finale/logo.png);
-    width:auto;
-}
-*/
-
 
 /*Carousel*/
 .bd-example{
-    padding-top: 1%;
     width: 100%;
-    height:100%;
     margin:auto;
 }
 
 .bd-example h5{
-    font-size: 2rem;
+    font-size: 4.5em;
+    text-align: start;
 }
 
 .bd-example p{
-    font-size: 1.5rem;
+    font-size: 3em;
+    text-align: start;
 }
 
 .carousel-caption{
-    color:black;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px white;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    top: 30%;
+    font-family: Party-Business;
+    
+}
+
+.carousel-indicators{
+    display:none;
+}
+
+.signature{
+    
+    width: 20%;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+/*fellows*/
+
+.fellow_subtitle{
+    font-size:1.5rem;
+}
+
+.annatar{
+    font-family:Annatar;
+    color: rgb(255,128,0);
+    font-size:3rem;
 }
 
 /*Pills*/
+
+.annatar2{
+    font-family:Annatar;
+    color: transparent;
+}
+
+.pills{
+    margin-top: 2%;
+    font-size:1.3rem;
+}
+
+.pills .active{
+    background: url("img/bg_light.png");
+    color:rgb(236, 88, 0);
+}
+
+.pills .nav-link:hover{
+    border-bottom: 5px solid rgb(236, 88, 0);
+    border-radius:2px;
+}
+
+.pills .nav-link:hover .annatar2{
+    color:rgb(236, 88, 0);
+    font-size: 1.5rem;
+}
+
 .nav-pills{
     padding-top: 1%;
+    padding-bottom:1%;
 }
 
 .nav_item{
@@ -73,8 +138,6 @@ body{
 }
 
 /*Card Deck*/
-
-
 
 .card-deck{
     padding-top: 1%;
@@ -93,14 +156,26 @@ body{
     margin-top:-110%;
     margin-left: 5%;
     text-align:center;
-    color:white;
-    background-color:GREY;
-    opacity:0.9;
+    color:black;
+    background-color:white;
+    opacity:1;
     border-radius: 5px;
-    font-size:2rem;
+    font-size:25px;
 }
 
 .wanted_status_dead{
+    position: absolute;
+    width:90%;
+    height:auto;
+    margin-top:-110%;
+    margin-left: 5%;
+    text-align:center;
+    color: rgb(255,128,0);
+    opacity:1;
+    font-size:25px;
+}
+
+.wanted_name{
     position: absolute;
     width:90%;
     height:auto;
@@ -108,30 +183,67 @@ body{
     margin-left: 5%;
     text-align:center;
     color:white;
-    background-color:GREY;
-    opacity:0.9;
     border-radius: 5px;
     font-size:2rem;
+}
+
+.wanted_name_dead{
+    position: absolute;
+    width:90%;
+    height:auto;
+    margin-top:-55%;
+    margin-left: 5%;
+    text-align:center;
+    color:white;
+    border-radius: 5px;
+    font-size:2rem;
+    text-decoration: line-through;
+    text-decoration-color: rgb(255,128,0);
 }
 
 .bloc_img_card:hover .wanted_status, .bloc_img_card:hover .wanted_status_dead{
     display:none;
 }
 
+.bloc_img_card:hover .wanted_name{
+    margin-top: -25%;
+}
+
+.bloc_img_card:hover .wanted_name_dead{
+    margin-top: -25%;
+}
+
 .bloc_img_card:hover{
     opacity:1;
 }
+
+.amount{
+    color:rgb(255,128,0);
+}
+
+.card-text{
+    font-family: Party-Business;
+    font-size: 2.5rem;
+}
+/*
+@media screen and (max-width:960px){
+    .wanted_status{
+        font-size:1.8rem;
+    }
+    .wanted_name{
+        margin-top:-40%;
+    }
+    .wanted_name_dead{
+        margin-top:-40%;
+}
+*/
 
 /*Media object*/
 
 .btn_facebook{
     padding-top: 0px;
     padding-bottom:0px;
-    margin-top:-6%;
-}
-
-.capture_detail{
-    margin-top: -2%;
+   /* margin-top:-6%; */
 }
 
 .profile{
@@ -139,9 +251,10 @@ body{
     color:black;
 }
 
-.media-body + h5{
-    font-size:2rem;
-    font-weight:bold;
+.hunter_name{
+    font-size:3rem;
+    color:rgb(255,128,0);
+    font-family: Party-Business;
 }
 
 /*Cards*/
@@ -161,6 +274,55 @@ td{
 
 .card{
     margin-bottom: 1%;
+    background: url(img/bg_dark.png);
+    color:white;
+}
+
+.bloc_img_card{
+    margin: 2%;
+}
+
+
+/*Reward*/
+
+#reward{
+    width:100%;
+    height:auto;
+    background: url(img/bg_dark.png);
+    color: white;
+    
+}
+
+#reward h2{
+    margin-top:2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.reward_text{
+    padding-top:4%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.reward_text + p{
+    margin-bottom: 5%;
+}
+
+.contact_button{
+    transform: skew(-20deg);
+    color: rgb(255,128,0);
+    font-size:1.5rem;
+}
+
+/*About the ring*/
+
+#ring{
+    background: url(img/bg_dark.png); 
+}
+
+#ring + h2{
+    color:white;
 }
 
 /*form*/
